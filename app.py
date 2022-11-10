@@ -2,7 +2,7 @@ from pathlib import Path
 
 import streamlit as st
 from PIL import Image
-
+import pandas as pd
 
 
 def add_job_section(job_data):
@@ -271,9 +271,9 @@ st.write("---")
 st.write('\n')
 st.subheader("Project 1: 2D and 3D Shotchart Visualisation")
 
-'''shots = pd.read_csv('Projects\\Project  1\\shots_data.csv')
+shots = pd.read_csv('Projects\\Project  1\\shots_data.csv')
 st.write('INPUT DATA')
-st.dataframe(data=shots)'''
+st.dataframe(data=shots)
 
 st.write(
     """With this df we can compute the Shooting percentage and the Effective field goal percentage using the following code""")
@@ -693,9 +693,9 @@ st.image(Image.open(current_dir / "Projects" / "Project  1" / "output" / "print.
 st.write('2D Shotchart')
 st.image(Image.open(current_dir / "Projects" / "Project  1" / "output" / "df.jpeg"))
 
-'''st.write('3D Shotchart')
+st.write('3D Shotchart')
 video = open(current_dir / "Projects" / "Project  1" / "output" / "3d plot demo.mp4",'rb')
-st.video(video, format="video/mp4", start_time=0)'''
+st.video(video, format="video/mp4", start_time=0)
 
 
 st.write('\n')
