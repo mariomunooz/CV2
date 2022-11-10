@@ -271,7 +271,7 @@ st.write("---")
 st.write('\n')
 st.subheader("Project 1: 2D and 3D Shotchart Visualisation")
 
-shots = pd.read_csv('Projects\\Project  1\\shots_data.csv')
+shots = pd.read_csv('https://raw.githubusercontent.com/mariomunooz/data/main/shots_data.csv')
 st.write('INPUT DATA')
 st.dataframe(data=shots)
 
