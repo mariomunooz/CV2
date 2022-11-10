@@ -227,42 +227,7 @@ for job in range(len(pics_for_job)):
 # for project, link in PROJECTS.items():
 #     st.write(f"[{project}]({link})")
 
-# --- Volunteering ---
-st.write('\n')
-st.subheader("Volunteering")
-st.write("---")
 
-pics_for_vol = [jobs_pics[4], jobs_pics[3], jobs_pics[5]]
-
-vol_titles = [
-    "**Volunteer (Final of Endesa League 2012 and King's Cup 2012 and 2019)| ACB (Association of Basketball Clubs)**",
-    '**Volunteer (Olympic Games 2012 Preparation Tournament)| Spanish Basketball Federation**',
-    '**Volunteer (Dallas Mavericks and F.C. Barcelona) | National Basketball Association (NBA)**'
-    ]
-
-dates_vol = ['In Barcelona February and June  2012',
-             '06/2012-06/2012',
-             '10/2012-10/2012 ']
-
-vol_descriptions = ["""In the 2019 Basketball King's Cup helping the organization of the U14 tournament in Madrid and trophy ceremony.
-
-Previous experiences:
-- ► In the 2012 Final of Endesa League. Helping to the organization of the trophy ceremony.
-- ► In the 2012 Basketball King's Cup helping the organization of the U14 tournament in Barcelona.""",
-
-                    """Volunteer in the Olympic Games 2012 Preparation Tournament in Barcelona between the National Teams of Spain, 
-Argentina and USA. Helping the press department of the tournament. """,
-
-                    """Volunteer in the friendly game between Dallas Mavericks and F.C. Barcelona. Helping the marketing department."""
-                    ]
-
-for vol in range(len(pics_for_vol)):
-    job_data = {'image': pics_for_vol[vol],
-                'emoji': None,
-                'title': vol_titles[vol],
-                'duration': dates_vol[vol],
-                'description': vol_descriptions[vol]}
-    add_job_section(job_data)
 
 st.write('\n')
 st.subheader("PROJECTS")
@@ -714,3 +679,42 @@ st.image(Image.open(current_dir / "Projects" / "Project 2" / "3.jpg"))
 st.write('To use this code, you only need to write here the password of yor MYSQL Server')
 st.image(Image.open(current_dir / "Projects" / "Project 2" / "4.jpg"))
 st.write(f"[Link to github repo](https://github.com/mariomunooz/ACB-scrapper)")
+
+
+
+# --- Volunteering ---
+st.write('\n')
+st.subheader("Volunteering")
+st.write("---")
+
+pics_for_vol = [jobs_pics[4], jobs_pics[3], jobs_pics[5]]
+
+vol_titles = [
+    "**Volunteer (Final of Endesa League 2012 and King's Cup 2012 and 2019)| ACB (Association of Basketball Clubs)**",
+    '**Volunteer (Olympic Games 2012 Preparation Tournament)| Spanish Basketball Federation**',
+    '**Volunteer (Dallas Mavericks and F.C. Barcelona) | National Basketball Association (NBA)**'
+    ]
+
+dates_vol = ['In Barcelona February and June  2012',
+             '06/2012-06/2012',
+             '10/2012-10/2012 ']
+
+vol_descriptions = ["""In the 2019 Basketball King's Cup helping the organization of the U14 tournament in Madrid and trophy ceremony.
+
+Previous experiences:
+- ► In the 2012 Final of Endesa League. Helping to the organization of the trophy ceremony.
+- ► In the 2012 Basketball King's Cup helping the organization of the U14 tournament in Barcelona.""",
+
+                    """Volunteer in the Olympic Games 2012 Preparation Tournament in Barcelona between the National Teams of Spain, 
+Argentina and USA. Helping the press department of the tournament. """,
+
+                    """Volunteer in the friendly game between Dallas Mavericks and F.C. Barcelona. Helping the marketing department."""
+                    ]
+
+for vol in range(len(pics_for_vol)):
+    job_data = {'image': pics_for_vol[vol],
+                'emoji': None,
+                'title': vol_titles[vol],
+                'duration': dates_vol[vol],
+                'description': vol_descriptions[vol]}
+    add_job_section(job_data)
