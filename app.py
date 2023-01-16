@@ -12,7 +12,6 @@ def add_job_section(job_data):
 
     with col2:
         st.write(job_data['title'])
-        st.write(job_data['duration'])
 
         description = job_data['description'].split('|')
 
@@ -31,7 +30,7 @@ PAGE_TITLE = "Digital CV | Mario Muñoz Serrano"
 PAGE_ICON = ":wave:"
 NAME = "Mario Muñoz Serrano"
 DESCRIPTION = """
-Data Analyst, assisting enterprises by supporting data-driven decision-making.
+Data Scientist, assisting enterprises by supporting data-driven decision-making.
 """
 EMAIL = "mariomunozserrano@gmail.com"
 PHONE = '+34 664 633 542'
@@ -65,12 +64,7 @@ with col1:
 with col2:
     st.title(NAME)
     st.write(DESCRIPTION)
-    st.download_button(
-        label=" 📄 Download Resume",
-        data=PDFbyte,
-        file_name=resume_file.name,
-        mime="application/octet-stream",
-    )
+
     st.write("📫", EMAIL)
     # st.write("📱", PHONE)
 
@@ -116,109 +110,16 @@ edu_titles = [
     '**Bachelor of enginerring (BEng) • Math engineering in data science (English) | Pompeu Fabra University**',
     '**Bachelor degree (BA) • Political and Administration Science | University of Barcelona**'
     ]
-dates_edu = ['2019-Now', '2011-2015']
+
 
 for edu in range(len(pics_for_edu)):
     job_data = {'image': pics_for_edu[edu],
                 'emoji': None,
                 'title': edu_titles[edu],
-                'duration': dates_edu[edu],
+
                 'description': ''}
     add_job_section(job_data)
 
-# --- WORK HISTORY ---
-st.write('\n')
-st.subheader("Work History")
-st.write("---")
-
-# The pic i is the pic of job i
-pics_for_job = [jobs_pics[0],
-                jobs_pics[1], jobs_pics[1],
-                jobs_pics[2], jobs_pics[2], jobs_pics[2], jobs_pics[2], jobs_pics[2],
-                jobs_pics[3]
-                ]
-
-emojis = ["💻💳", "💻", "💻", "💻🏀", "💻🏀", "💻🏀", "💻🏀", "💻🏀", "💻🏀"]
-
-titles = ["**Data Analyst | Comercia Global Payments**",
-          "**Data Analyst | L'Hospitalet City Council**",
-          "**ICT Technician | L'Hospitalet City Council**",
-          "**U12 Assistant Coach & Scout Analyst | Club Joventut Badalona**",
-          "**U12 Mini C Head coach & Scout Analyst | Club Joventut Badalona**",
-          "**U14 Assistant Coach & Analyst | Club Joventut Badalona**",
-          "**U13 Assistant Coach & Analyst | Club Joventut Badalona**",
-          "**Youth Basketball Coach| Club Joventut Badalona**",
-          "**Volunteers Office Coordinator (Basketball world cup 2014) | Spanish Basketball Federation**"
-          ]
-
-dates = ["07/2021 - 04/2022", "03/2019 - 05/2020", "02/2018 - 03/2019", "08/2018 - 07/2019", "08/2017 - 07/2018",
-         "08/2016 - 07/2017", "08/2015 - 07/2016", "08/2012 - 07/2015", "07/2014 - 10/2014"
-         ]
-
-descriptions = [
-    """
-- ► Used Python, R and SQL to redefine and track KPIs.
-- ► Creation of MS Excel KPI templates that can be used for non programmers .
-- ► Improving the detection capacity of our fraud detection system using Data Mining and Machine Learning algorithms
-- ► At the same time, we implement different evidence-based rules to reduce fraud operations
-""",
-
-    """
-- ► Used Python, Power BI and MS Excel to analyze data about key actions in the different neighborhoods and they possible impacts.
-- ► Used Power BI, Python and Cartodb to make visualizations and strategic reports on the city of L’Hospitalet de Llobregat.
-""",
-
-    """
-- ► Creation of a specific website to make easier the access to relevant information by the social entities of L’Hospitalet
-- ► Proposal of new functionalities inside of the Metadecidim community.
-- ► Support for training on the Decidim digital platform for the technical staff of the city council.
-- ► Support and advice on new technologies.
-""",
-
-    """I deliver effective support during training sessions that follow a seasonal training block specific to the 
-    Youth Development Phase while also working as an scout analyst. This includes watching different games every week 
-    to find youth prospects that could be interesting and add them to our database. As well as other tasks, like: 
-
-- ► Recording some games for the ACB first team.
-- ► Scorer and timer in some friendly games of the ACB first team.
-- ► Refereeing youth friendly games.
-
-""",
-    """I deliver effective training sessions that follow a seasonal training block specific to the Youth Development 
-    Phase while also working as an scout analyst. This includes watching different games every week to find youth 
-    prospects that could be interesting and add them to our database. """,
-
-    """Assisted the Head Coach by providing analysis of individual and team performance. This includes filming, 
-    coding, collating, and analyzing match/training video using longomatch, python, excel and playsight. 
-
-Champions of Catalonia, runners-up of Spain and participation in the ACB Minicopa
-""",
-
-    """Assisted the Head Coach by providing analysis of individual and team performance. This includes filming, 
-    coding, collating, and analyzing match/training video using longomatch, python, excel and playsight. """,
-
-    """
-Tasks at Club Joventut Badalona School:
-Basketball coaching, statistical analysis, video analysis and scouting, among others.
-""",
-
-    """My obligations here were. Collaborate in the volunteer selection processes. The planning of the different 
-resources of the office and the coordination of a volunteers team of 150 people according to the needs of the 
-different departments (marketing, press, competition, technologies, protocol ...). As well as support for the 
-Slovenian national team for various practices, among others. 
-
-First in Barcelona during round of 16, quarterfinals and semifinals and after in Madrid during the third and fourth 
-place and the world cup final. """
-
-]
-
-for job in range(len(pics_for_job)):
-    job_data = {'image': pics_for_job[job],
-                'emoji': emojis[job],
-                'title': titles[job],
-                'duration': dates[job],
-                'description': descriptions[job]}
-    add_job_section(job_data)
 
 # --- Projects & Accomplishments ---
 # st.write('\n')
@@ -230,7 +131,7 @@ for job in range(len(pics_for_job)):
 
 
 st.write('\n')
-st.subheader("PROJECTS")
+st.subheader("PROJECT PORTFOLIO")
 st.write("---")
 
 st.write('\n')
@@ -682,39 +583,3 @@ st.write(f"[Link to github repo](https://github.com/mariomunooz/ACB-scrapper)")
 
 
 
-# --- Volunteering ---
-st.write('\n')
-st.subheader("Volunteering")
-st.write("---")
-
-pics_for_vol = [jobs_pics[4], jobs_pics[3], jobs_pics[5]]
-
-vol_titles = [
-    "**Volunteer (Final of Endesa League 2012 and King's Cup 2012 and 2019)| ACB (Association of Basketball Clubs)**",
-    '**Volunteer (Olympic Games 2012 Preparation Tournament)| Spanish Basketball Federation**',
-    '**Volunteer (Dallas Mavericks and F.C. Barcelona) | National Basketball Association (NBA)**'
-    ]
-
-dates_vol = ['In Barcelona February and June  2012',
-             '06/2012-06/2012',
-             '10/2012-10/2012 ']
-
-vol_descriptions = ["""In the 2019 Basketball King's Cup helping the organization of the U14 tournament in Madrid and trophy ceremony.
-
-Previous experiences:
-- ► In the 2012 Final of Endesa League. Helping to the organization of the trophy ceremony.
-- ► In the 2012 Basketball King's Cup helping the organization of the U14 tournament in Barcelona.""",
-
-                    """Volunteer in the Olympic Games 2012 Preparation Tournament in Barcelona between the National Teams of Spain, 
-Argentina and USA. Helping the press department of the tournament. """,
-
-                    """Volunteer in the friendly game between Dallas Mavericks and F.C. Barcelona. Helping the marketing department."""
-                    ]
-
-for vol in range(len(pics_for_vol)):
-    job_data = {'image': pics_for_vol[vol],
-                'emoji': None,
-                'title': vol_titles[vol],
-                'duration': dates_vol[vol],
-                'description': vol_descriptions[vol]}
-    add_job_section(job_data)
