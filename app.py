@@ -64,7 +64,12 @@ with col1:
 with col2:
     st.title(NAME)
     st.write(DESCRIPTION)
-
+    st.download_button(
+        label=" 📄 Download Resume",
+        data=PDFbyte,
+        file_name=resume_file.name,
+        mime="application/octet-stream",
+    )
     st.write("📫", EMAIL)
     # st.write("📱", PHONE)
 
@@ -567,10 +572,96 @@ st.video(video, format="video/mp4", start_time=0)
 st.write('\n')
 st.subheader("Project 2: Application of classification in Marketing and Sales")
 st.write(f"[Python Notebook link]({'https://github.com/mariomunooz/MACHINE_LEARNING/blob/main/Application_of_classification_in_Marketing_and_Sales_.ipynb'})")
+st.write("""In this project, we will develop and apply different supervised classification tecnhiques. These methodologies are broadly used in business to multiple use cases as:
+
+-   -Identify new customers in the market
+-   -Identify customers in our internal Data Warehouse with more likely to buy a new product
+-   -Identify unsatisfied customers and thus, likely to be churners
+-   -Classify text into categories for spam identification or to process messages or emails from our customers
+
+During this project we will follow the end-to-end Machine Learning process: from data gathering and cleaning, exploratory data analysis, feature engineering and finally, training and prediction. In particular, the main sections of this project are:
+
+-    -Data understanding and preparation: exploration of the dataset and feature engineering (missing values, outlier identification, categorical variables management)
+-    -Model Training: training the baseline SVM and Decision Trees. Analysis of metrics (recall, precision, confusion metrics) and improvement the classification through several techniques as undersampling to balance or ensemble of models
+-    -Creating a Business opportunity with Machine Learning: selection of the best model and identification of the most important features
+
+We will apply all these techniques to identify new customers to capture and improve sales in a marketing use case.""")
 
 
 st.write('\n')
-st.subheader("Project 3: ACB Web Scrapping of players information")
+st.subheader("Project 3: Data Mining | Data Preparation")
+st.write(f"[Python Notebook link]({'https://github.com/mariomunooz/Data-Mining/blob/main/Data_Mining_data_preparation.ipynb'})")
+st.write("""Data scientists spend a big chunk of their time preparing data and this is one of the first steps in any data mining project. This step is normally called data preparation.
+
+The processes of getting an initial understanding of a dataset and preparing it usually go hand-in-hand, and it is critical to perform them well to obtain valid results later. Plus, you can save time and effort by learning how to do proper data preparation.
+
+In this session, we will assume you just received a new dataset and need to do some initial steps with it:
+
+1. Exploratory Data Analysis
+
+    - Calculate basis statistics as mean, median, variance, maximum and minimum
+    - Look at distributions, identify outliers
+    - Calculate correlations between variables
+
+2. Feature engineering:
+
+    - Deal with missing values
+    - Standardize all numerical columns
+    - Convert categorical columns to dummy binary variables
+    - Date and period management
+    - Feature generation
+""")
+
+
+st.write('\n')
+st.subheader("Project 4: Data Mining | Find near-duplicates using shingling")
+st.write(f"[Python Notebook link]({'https://github.com/mariomunooz/Data-Mining/blob/main/Data_Mining_Find_near_duplicates_using_shingling.ipynb'})")
+st.write("""In this session we will take a large corpus of tweets and detect near-duplicates on this corpus using a technique known as shingling.
+
+Two documents are considered near-duplicates if they share a large amount of ngrams. The ngrams of a phrase are overlapping sequences of words of length n. For instance, the phrase 'Never let them guess your next move.' has the following 3-grams:
+
+    'never let them'
+    'let them guess'
+    'them guess your'
+    'guess your next'
+    'your next move'
+
+To measure the similarity between two sets, we will use the Jaccard index, which is the size of the intersection of the two sets divided by their union. This values goes between 0.0 (meaning the documents have no ngrams in common) to 1.0 (meaning the documents have the same ngrams).
+
+To speed up things, instead of comparing the set of shingles of two documents which can be large, we will derive a fixed-length signature or sketch for each document. This will be obtained by (1) applying a random permutation to the list of possible ngrams, and (2) pick the ngram that appears first in the permuted list. The Jaccard index between these signatures will be a good approximation of the Jaccard index between the original sets of ngrams.
+""")
+
+st.write('\n')
+st.subheader("Project 5: Data Mining | Association Rules")
+st.write(f"[Python Notebook link]({'https://github.com/mariomunooz/Data-Mining/blob/main/Data_Mining_association_rules.ipynb'})")
+st.write("""Association rule mining techniques are useful to analyze datasets consisting of transactions, in which each transaction is a collection of items.
+
+We will use a well-known dataset named Instacart containing more than 3 million orders of products through a grocery shopping app""")
+
+
+st.write('\n')
+st.subheader("Project 6: Data Mining | Recommendations engines (interactions-based)")
+st.write(f"[Python Notebook link]({'https://github.com/mariomunooz/Data-Mining/blob/main/Data_Mining_Item_based_recsys.ipynb'})")
+st.write("""For this assignment we will build and apply an item-based and model-based collaborative filtering recommenders for movies.""")
+
+st.write('\n')
+st.subheader("Project 7: Data Mining | Outlier Analysis")
+st.write(f"[Python Notebook link]({'https://github.com/mariomunooz/Data-Mining/blob/main/Data_mining_outlier_analysis.ipynb'})")
+st.write("""The objective of this session is to practice finding outliers by implementing the Isolation Forest algorithm.""")
+
+st.write('\n')
+st.subheader("Project 8: Data Mining | Forecasting")
+st.write(f"[Python Notebook link]({'https://github.com/mariomunooz/Data-Mining/blob/main/Data_Mining_forecasting.ipynb'})")
+st.write("""In this session we will do some time series forecasting on a weather-related time series, which contains temperature, precipitation, and wind speed data for the Barcelona airport.""")
+
+
+
+
+
+
+
+st.write('\n')
+st.subheader("Project 9: ACB Web Scrapping of players information")
 st.write("The code that you can see below iterates over each team roster in ACB")
 st.image(Image.open(current_dir / "Projects" / "Project 2" / "1.jpg"))
 st.write("Gets the information of each player")
