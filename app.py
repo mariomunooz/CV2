@@ -106,24 +106,24 @@ Among others...
 jobs_pics = [Image.open(current_dir / "assets" / "job_pics" / f"{image}.jpg") for image in range(0, 8)]
 
 # --- EDUCATION ---
-st.write('\n')
-st.subheader("EDUCATION")
-st.write("---")
-
-pics_for_edu = [jobs_pics[6], jobs_pics[7]]
-edu_titles = [
-    '**Bachelor of enginerring (BEng) • Math engineering in data science (English) | Pompeu Fabra University**',
-    '**Bachelor degree (BA) • Political and Administration Science | University of Barcelona**'
-    ]
-
-
-for edu in range(len(pics_for_edu)):
-    job_data = {'image': pics_for_edu[edu],
-                'emoji': None,
-                'title': edu_titles[edu],
-
-                'description': ''}
-    add_job_section(job_data)
+#st.write('\n')
+#st.subheader("EDUCATION")
+#st.write("---")
+#
+#pics_for_edu = [jobs_pics[6], jobs_pics[7]]
+#edu_titles = [
+#    '**Bachelor of enginerring (BEng) • Math engineering in data science (English) | Pompeu Fabra University**',
+#    '**Bachelor degree (BA) • Political and Administration Science | University of Barcelona**'
+#    ]
+#
+#
+# for edu in range(len(pics_for_edu)):
+#     job_data = {'image': pics_for_edu[edu],
+#                 'emoji': None,
+#                 'title': edu_titles[edu],
+# 
+#                 'description': ''}
+#     add_job_section(job_data)
 
 
 # --- Projects & Accomplishments ---
