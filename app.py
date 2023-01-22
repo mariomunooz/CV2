@@ -128,21 +128,6 @@ with st.container():
         customer behavior in a marketing use case. It includes data preparation, model training, and identifying 
         important features to improve classification and create a business opportunity.
         """)
-
-    with col2:
-        st.subheader("Data Preparation")
-        st.write(
-            "In this project, we will focus on data preparation, a crucial step in any data mining project. We will cover initial steps of understanding and preparing a new dataset, including Exploratory Data Analysis, Feature engineering, dealing with missing values, standardizing numerical columns, converting categorical columns to binary variables, managing dates and periods, and generating new features")
-
-    with col3:
-        st.subheader("Find near-duplicates using shingling")
-        st.write(
-            "In this project, we will detect duplicate tweets using shingling, which involves comparing the overlapping sequences of words (ngrams) to measure similarity. We will use the Jaccard index and fixed-length signatures to speed up the process and approximate the similarity.")
-
-with st.container():
-    b1, b2, b3 = st.columns(3)
-
-    with b1:
         with st.expander('Takeaways'):
             st.write("""
             \n- The main differences between the customer and non-customer datasets are that 
@@ -159,7 +144,10 @@ with st.container():
             div = Div(text=html)
             st.bokeh_chart(div)
 
-    with b2:
+    with col2:
+        st.subheader("Data Preparation")
+        st.write(
+            "In this project, we will focus on data preparation, a crucial step in any data mining project. We will cover initial steps of understanding and preparing a new dataset, including Exploratory Data Analysis, Feature engineering, dealing with missing values, standardizing numerical columns, converting categorical columns to binary variables, managing dates and periods, and generating new features")
         with st.expander('Takeaways'):
             st.write("""
             \n- The consumers of iPhone usually have more data traffic than the consumers of samsung
@@ -170,8 +158,10 @@ with st.container():
             html = '<img src onerror="{}">'.format(js)
             div = Div(text=html)
             st.bokeh_chart(div)
-
-    with b3:
+    with col3:
+        st.subheader("Find near-duplicates using shingling")
+        st.write(
+            "In this project, we will detect duplicate tweets using shingling, which involves comparing the overlapping sequences of words (ngrams) to measure similarity. We will use the Jaccard index and fixed-length signatures to speed up the process and approximate the similarity.")
         with st.expander('Takeaways'):
             st.write("""
             \n - 294 documents have at least 50 signature matches, which includes both full matches and partial matches.
@@ -184,6 +174,7 @@ with st.container():
             div = Div(text=html)
             st.bokeh_chart(div)
 
+
 with st.container():
     col4, col5, col6 = st.columns(3)
     with col4:
@@ -191,22 +182,6 @@ with st.container():
         st.write("""Association rule mining techniques are useful to analyze datasets consisting of transactions, 
         in which each transaction is a collection of items. We will use a well-known dataset named Instacart 
         containing more than 3 million orders of products through a grocery shopping app""")
-
-    with col5:
-        st.subheader("Recommendations engines (interactions-based)")
-        st.write(
-            """For this project we builded and applied an item-based and model-based collaborative filtering recommenders for movies.""")
-
-    with col6:
-        st.subheader("Outlier Analysis")
-        st.write("""This analysis aims to identify whether a patient is hypothyroid by building three classes: normal 
-        (not hypothyroid), hyperfunction and subnormal functioning. Both training and testing instances were used for 
-        outlier detection and only 6 real attributes were considered.""")
-
-with st.container():
-    b4, b5, b6 = st.columns(3)
-
-    with b4:
         with st.expander('Takeaways'):
             st.write(""" 
             \n- There is a strong association between the study of Mathematical Engineering on 
@@ -225,7 +200,10 @@ with st.container():
             div = Div(text=html)
             st.bokeh_chart(div)
 
-    with b5:
+    with col5:
+        st.subheader("Recommendations engines (interactions-based)")
+        st.write(
+            """For this project we builded and applied an item-based and model-based collaborative filtering recommenders for movies.""")
         with st.expander('Takeaways'):
             st.write("""We have compiled two separate lists of movies, each tailored to a specific genre preference. 
             The first list is recommended for individuals who enjoy superhero movies and includes films such as "X2: 
@@ -240,7 +218,11 @@ with st.container():
             div = Div(text=html)
             st.bokeh_chart(div)
 
-    with b6:
+    with col6:
+        st.subheader("Outlier Analysis")
+        st.write("""This analysis aims to identify whether a patient is hypothyroid by building three classes: normal 
+        (not hypothyroid), hyperfunction and subnormal functioning. Both training and testing instances were used for 
+        outlier detection and only 6 real attributes were considered.""")
         with st.expander('Takeaways'):
             st.write("""
             \n- The features f4 and f6 were identified as useful in differentiating between normal and abnormal thyroids.
@@ -255,6 +237,8 @@ with st.container():
             div = Div(text=html)
             st.bokeh_chart(div)
 
+
+
 with st.container():
     col7, col8, col9 = st.columns(3)
 
@@ -262,25 +246,6 @@ with st.container():
         st.subheader("Forecasting")
         st.write("""In this project we have done some time series forecasting on a weather-related time series, 
         which contains temperature, precipitation, and wind speed data for the Barcelona airport.""")
-
-    with col8:
-        st.subheader("2D and 3D Shotchart Visualisation")
-        st.write("""This task involves analyzing and visualize a dataset of basketball shot coordinates and outcomes to determine 
-        the effective field goal percentage and shot distribution for two teams within different shot zones on the 
-        court. """)
-
-    with col9:
-        st.subheader("ACB Web Scrapping of players information")
-        st.write("""The Liga ACB is a professional indoor basketball league in Spain, featuring 18 teams. The dataset was 
-        obtained by web scraping player information, including ACB ID, name, image URL, birth place, birth date, height, 
-        position, nationality, games played, and minutes played, as well as career, national team competitions, titles, 
-        awards and stats per season. The data is stored in a MySQL database and the code for obtaining the data requires 
-        the user to input their MySQL server password in the pipelines.py file. """)
-
-with st.container():
-    b7, b8, b9 = st.columns(3)
-
-    with b7:
         with st.expander('Takeaways'):
             st.write("""
             \n- Seasonality is observed for temperature but not for rainfall.
@@ -294,7 +259,11 @@ with st.container():
             div = Div(text=html)
             st.bokeh_chart(div)
 
-    with b8:
+    with col8:
+        st.subheader("2D and 3D Shotchart Visualisation")
+        st.write("""This task involves analyzing and visualize a dataset of basketball shot coordinates and outcomes to determine 
+        the effective field goal percentage and shot distribution for two teams within different shot zones on the 
+        court. """)
         with st.expander('Visualisations'):
             st.image('https://i.imgur.com/CelxplN.jpeg')
         if st.button('Github', key="ee_github"):
@@ -304,7 +273,13 @@ with st.container():
             div = Div(text=html)
             st.bokeh_chart(div)
 
-    with b9:
+    with col9:
+        st.subheader("ACB Web Scrapping of players information")
+        st.write("""The Liga ACB is a professional indoor basketball league in Spain, featuring 18 teams. The dataset was 
+        obtained by web scraping player information, including ACB ID, name, image URL, birth place, birth date, height, 
+        position, nationality, games played, and minutes played, as well as career, national team competitions, titles, 
+        awards and stats per season. The data is stored in a MySQL database and the code for obtaining the data requires 
+        the user to input their MySQL server password in the pipelines.py file. """)
         with st.expander('MySQL Output'):
             st.image('https://i.imgur.com/Rizm3G1.jpeg')
         if st.button('Github', key="ek_github"):
@@ -313,6 +288,8 @@ with st.container():
             html = '<img src onerror="{}">'.format(js)
             div = Div(text=html)
             st.bokeh_chart(div)
+
+
 
 # --- CONTACT ---
 with st.container():
