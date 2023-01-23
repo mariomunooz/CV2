@@ -84,6 +84,14 @@ with st.container():
             If you are interested in building something together, have questions/suggestions about my code or just wanna connect, feel free to get in touch with me! 
             """
         )
+        resume_file = current_dir / "assets" / "CV.pdf"
+        with open(resume_file, "rb") as pdf_file:
+            PDFbyte = pdf_file.read()
+        st.download_button(
+            label=" 📄 Download Resume",
+            data=PDFbyte,
+            file_name=resume_file.name,
+            mime="application/octet-stream",)
 
 # --- TECH STACK / SKILLS ---
 with st.container():
