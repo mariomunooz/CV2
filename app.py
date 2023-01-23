@@ -6,14 +6,15 @@ from bokeh.models.widgets import Div
 
 current_dir = Path(__file__).parent if "__file__" in locals() else Path.cwd()
 resume_file = current_dir / "assets" / "CV.pdf"
-with open(resume_file, "rb") as pdf_file:
-    PDFbyte = pdf_file.read()
 
 st.set_page_config(
     page_title="🚀 Mario Portfolio Page 🚀",
     page_icon=":boy:",
     layout="wide",
 )
+
+with open(resume_file, "rb") as pdf_file:
+    PDFbyte = pdf_file.read()
 
 
 def load_lottieurl(url):
