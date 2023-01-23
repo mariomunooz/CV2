@@ -4,6 +4,11 @@ import streamlit as st
 from streamlit_lottie import st_lottie
 from bokeh.models.widgets import Div
 
+current_dir = Path(__file__).parent if "__file__" in locals() else Path.cwd()
+resume_file = current_dir / "assets" / "CV.pdf"
+with open(resume_file, "rb") as pdf_file:
+    PDFbyte = pdf_file.read()
+
 st.set_page_config(
     page_title="🚀 Mario Portfolio Page 🚀",
     page_icon=":boy:",
@@ -84,9 +89,6 @@ with st.container():
             If you are interested in building something together, have questions/suggestions about my code or just wanna connect, feel free to get in touch with me! 
             """
         )
-        resume_file = current_dir / "assets" / "CV.pdf"
-        with open(resume_file, "rb") as pdf_file:
-            PDFbyte = pdf_file.read()
         st.download_button(
             label=" 📄 Download Resume",
             data=PDFbyte,
