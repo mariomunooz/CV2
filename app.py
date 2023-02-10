@@ -84,7 +84,7 @@ with st.container():
             - BEng Mathematical Engineering in Data Science (Pompeu Fabra University) (Currently in my last year) 
             - MOOC Elements of AI (University of Helsinki)
             - BA Political and Administration Sciences (University of Barcelona)
-            - 2+ years of professional experience in the fraud department of an investment bank
+            - Professional experience in the fraud department of an investment bank
             - Helped the Hospitalet City Council in obtaining a subsidy of 2.4 million euros from Spanish Government.
             - Former Youth Basketball Coach and Analyst of Club Joventut Badalona
             - Enthusiasm for data science, machine learning and ball sports (Basketball, football and beach volleyball)
