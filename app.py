@@ -112,19 +112,24 @@ with st.container():
             st.bokeh_chart(div)
 
     with col2:
-        st.subheader("Data Preparation")
-        st.write(
-            "In this project, we will focus on data preparation, a crucial step in any data mining project. We will cover initial steps of understanding and preparing a new dataset, including Exploratory Data Analysis, Feature engineering, dealing with missing values, standardizing numerical columns, converting categorical columns to binary variables, managing dates and periods, and generating new features")
+        st.subheader("Outlier Analysis")
+        st.write("""This analysis aims to identify whether a patient is hypothyroid by building three classes: normal 
+        (not hypothyroid), hyperfunction and subnormal functioning. Both training and testing instances were used for 
+        outlier detection and only 6 real attributes were considered.""")
         with st.expander('Takeaways'):
             st.write("""
-            \n- The consumers of iPhone usually have more data traffic than the consumers of samsung
-            \n- The customers with higher usage of data traffic also have higher billing amounts""")
-        if st.button('Github', key="ccw_github"):
+            \n- The features f4 and f6 were identified as useful in differentiating between normal and abnormal thyroids.
+            \n- The threshold of 0.45 outlier score was chosen as it balances accuracy and recall in this medical case.
+            \n- Results for this threshold yielded an accuracy of 0.68, normal precision of 0.38, abnormal precision of 0.98, recall of 0.95, Specificity of 0.61, False positive rate of 0.39 and False negative rate of 0.05.
+
+            """)
+        if st.button('Github', key="ec_github"):
             st.write('Github opens in new browser tab')
-            js = "window.open('https://github.com/mariomunooz/Data-Mining/blob/main/Data_Mining_data_preparation.ipynb')"  # New tab or window
+            js = "window.open('https://github.com/mariomunooz/Data-Mining/blob/main/Data_Mining_Item_based_recsys.ipynb')"  # New tab or window
             html = '<img src onerror="{}">'.format(js)
             div = Div(text=html)
             st.bokeh_chart(div)
+        
     with col3:
         st.subheader("Find near-duplicates using shingling")
         st.write(
@@ -186,23 +191,20 @@ with st.container():
             st.bokeh_chart(div)
 
     with col6:
-        st.subheader("Outlier Analysis")
-        st.write("""This analysis aims to identify whether a patient is hypothyroid by building three classes: normal 
-        (not hypothyroid), hyperfunction and subnormal functioning. Both training and testing instances were used for 
-        outlier detection and only 6 real attributes were considered.""")
+        st.subheader("Data Preparation")
+        st.write(
+            "In this project, we will focus on data preparation, a crucial step in any data mining project. We will cover initial steps of understanding and preparing a new dataset, including Exploratory Data Analysis, Feature engineering, dealing with missing values, standardizing numerical columns, converting categorical columns to binary variables, managing dates and periods, and generating new features")
         with st.expander('Takeaways'):
             st.write("""
-            \n- The features f4 and f6 were identified as useful in differentiating between normal and abnormal thyroids.
-            \n- The threshold of 0.45 outlier score was chosen as it balances accuracy and recall in this medical case.
-            \n- Results for this threshold yielded an accuracy of 0.68, normal precision of 0.38, abnormal precision of 0.98, recall of 0.95, Specificity of 0.61, False positive rate of 0.39 and False negative rate of 0.05.
-
-            """)
-        if st.button('Github', key="ec_github"):
+            \n- The consumers of iPhone usually have more data traffic than the consumers of samsung
+            \n- The customers with higher usage of data traffic also have higher billing amounts""")
+        if st.button('Github', key="ccw_github"):
             st.write('Github opens in new browser tab')
-            js = "window.open('https://github.com/mariomunooz/Data-Mining/blob/main/Data_Mining_Item_based_recsys.ipynb')"  # New tab or window
+            js = "window.open('https://github.com/mariomunooz/Data-Mining/blob/main/Data_Mining_data_preparation.ipynb')"  # New tab or window
             html = '<img src onerror="{}">'.format(js)
             div = Div(text=html)
             st.bokeh_chart(div)
+        
 
 
 
