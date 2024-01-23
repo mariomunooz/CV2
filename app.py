@@ -80,7 +80,7 @@ with st.container():
         #    height=500,
         #)
         
-        image = Image.open('assets\\profile.jpg')
+        image = Image.open('assets/profile.jpg')
 
         st.image(image)
 
