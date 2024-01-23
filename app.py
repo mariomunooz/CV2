@@ -4,6 +4,7 @@ import requests
 import streamlit as st
 from streamlit_lottie import st_lottie
 from bokeh.models.widgets import Div
+from PIL import Image
 
 current_dir = Path(__file__).parent if "__file__" in locals() else Path.cwd()
 resume_file = current_dir / "assets" / "CV.pdf"
@@ -41,92 +42,47 @@ with st.container():
     col1, col2 = st.columns((2, 1))
     with col1:
         st.title("Welcome to my Portfolio Page!")
-        st.subheader("Hi, I am Mario 🤗")
+        st.subheader("Hi, I am Mario Muñoz Serrano 🤗")
         st.subheader(
             """
-            I'm a Barcelona-based *Junior Data Scientist* who starts his journey in the broad field of *Machine Learning*
+            I'm a *Junior Data Scientist* who starts his journey in the broad field of *Machine Learning* and *Artificial Intelligence*
             """
         )
         st.write("""""")
-        st.subheader(
-            """
-            This page is actually made with Python :snake: and the associated Streamlit library. Even though the purpose of this library is mainly data science, this page is made to showcase that even with no knowledge of Web Development you can make a nice looking portfolio page with pure Python code.
-            """
-        )
-    with col2:
-        st_lottie(
-            load_lottieurl("https://assets1.lottiefiles.com/packages/lf20_rclfnagr.json"),
-            height=500,
-        )
-
-# --- ABOUT ---
-with st.container():
-    st.write("---")
-    col1, col2, col3 = st.columns([1, 1, 2])
-    with col1:
-        st_lottie(
-            load_lottieurl("https://assets6.lottiefiles.com/packages/lf20_aaleelx7.json"),
-            height=500,
-        )
-    with col2:
-        st_lottie(
-            load_lottieurl("https://assets6.lottiefiles.com/private_files/lf30_WdTEui.json"),
-            height=500,
-        )
-
-    with col3:
-        st.header("About")
         st.write(
             """
-            I have been analysing data professionally since 2018, starting with Python, Power BI, MS Excel and CartoDB to make strategic reports for the city council of my city 🐱‍👤
+            I Joined [Holistic Data Solutions](https://holisticds.com/en/) as Business Intelligence consultant in August 2023. There I am working on economic planification platforms for different clients. 
             
-            Short facts & milestones:
-            - BEng Mathematical Engineering in Data Science (Pompeu Fabra University) (Currently in my last year) 
-            - MOOC Elements of AI (University of Helsinki)
-            - BA Political and Administration Sciences (University of Barcelona)
-            - Professional experience in the fraud department of an investment bank
-            - Helped the Hospitalet City Council in obtaining a subsidy of 2.4 million euros from Spanish Government.
-            - Former Youth Basketball Coach and Analyst of Club Joventut Badalona
-            - Enthusiasm for data science, machine learning and ball sports (Basketball, football and beach volleyball)
-            If you are interested in building something together, have questions/suggestions about my code or just wanna connect, feel free to get in touch with me! 
+            Previous to Holistic, I’ve been working at [Caixabank](https://www.caixabank.com/home_en.html) as Data Scientist as part of the Fraud and Operations Compliance Team. Helping them to create machine learning models to prevent fraud, for over 2 years. At same time during 3 months, I had the opportunity to help the Keck Laboratory for Network Physiology at [Boston University](https://www.bu.edu/) and learn more about how muscles coordinate during tasks.
+
+            I’ve completed a bachelor’s degree in Political and Administration Sciences at [University of Barcelona](https://web.ub.edu/en/home). After that I’ve been curious about Artificial Intelligence and Data Science by doing the course of [Elements of AI](https://www.elementsofai.com/) at [University of Helsinki](https://www.helsinki.fi/en) and to deepen my understanding on that field I decided on 2019 to start my second bachelor's degree Mathematical Engineering on Data Science at [Pompeu Fabra University](https://www.upf.edu/en/home).
+
+            I’ve participated also on different Hackatons and courses:
+            -	Data Science [Schneider Electric Hackathon](https://nuwe.io/dev/competitions/schneider-electric-european-2023)
+            -	[HackUPC](https://hackupc.com/) at [Polytechnic University of Catalonia](https://www.upc.edu/en?set_language=en)
+            -	[ABDataChallenge](https://www.abdatachallenge.cat/en/home-en/) for Aigües de Barcelona (the company responsible for managing water services in the Barcelona metropolitan area)
+            -	[Artificial Intelligence and Data Science course](https://www.migranodearena.org/en/cause/curs-d-intel-ligencia-artificial-i-ciencia-de-dades) to gather funds for medical research.
+
+            I’m a curious person, who loves doing Data Science and Artificial Intelligence and Ball Sports (specially Basketball but also soccer and beach volleyball). 
+
             """
         )
+        
+        
         st.download_button(
             label=" 📄 Download Resume",
             data=PDFbyte,
             file_name=resume_file.name,
             mime="application/octet-stream",)
-
-# --- TECH STACK / SKILLS ---
-with st.container():
-    st.write("---")
-    col1, col2 = st.columns(2)
-    with col1:
-        st.header("Tech Stack / Skills")
-        st.write(
-            """
-            Languages
-            - Python (Scikit-learn, Pandas, Numpy, Matplotlib, Scipy), SQL, R, C, C++, Java
-            Web Scrapping
-            - Scrappy, Selenium, Beautiful Soup, Requests
-            Parallel Programming
-            - AWS, OpenMP API, OpenACC, CUDA
-            Data Visualization
-            - PowerBi, MS Excel, matplotlib, ggplot2, rayshader
-            Databases
-            - MySQL
-            Hosting & Cloud
-            - AWS, Streamlit Cloud 😉
-            Miscellaneous
-            - Git, Github
-             """
-        )
-
     with col2:
-        st_lottie(
-            load_lottieurl("https://assets9.lottiefiles.com/packages/lf20_vybwn7df.json"),
-            height=500,
-        )
+        #st_lottie(
+        #    load_lottieurl("https://assets1.lottiefiles.com/packages/lf20_rclfnagr.json"),
+        #    height=500,
+        #)
+        
+        image = Image.open('assets\\profile.jpg')
+
+        st.image(image)
 
 # --- PORTFOLIO ---
 with st.container():
@@ -136,23 +92,21 @@ with st.container():
 
     col1, col2, col3 = st.columns(3)
     with col1:
-        st.subheader("Application of classification in Marketing and Sales")
-        st.write("""This project uses supervised classification techniques to identify new customers and predict 
-        customer behavior in a marketing use case. It includes data preparation, model training, and identifying 
-        important features to improve classification and create a business opportunity.
+        st.subheader("NBA talent detection webapp")
+        st.write("""This project uses supervised multi-classification algorithms like Random Forests and Gradient Boosting methods to 
+                detect talent at early stages on the NBA, also we use [shap visualizations](https://towardsdatascience.com/using-shap-values-to-explain-how-your-machine-learning-model-works-732b3f40e137) to ensure explainability.
         """)
-        with st.expander('Takeaways'):
+        with st.expander('Tools Used'):
             st.write("""
-            \n- The main differences between the customer and non-customer datasets are that 
-            customer has a higher number of employees and more outliers in Revenues. 
-            \n- The top 3 features to discriminate 
-            between non customers and customers.  Are mobile potential, an estimation of the total annual expense that a 
-            company can do in telco services, including IoT. Revenue, annual incomes of the company. And the City where 
-            the company is located
-            \n- We have detected 208 non costumers to send to the sales managers to sell our products""")
-        if st.button('Github', key="ews_github"):
+                - [nba-api](https://github.com/swar/nba_api), requests, Beautiful Soup and SPARQL for data gathering. [More details](https://medium.com/@mariomunozserrano/forecasting-nba-careers-how-to-get-nba-data-3adedaa8984e) 
+                - R and Python for Data processing, data quality and target variable computation
+                - Sklearn for Random forests, for finding best model parameters and performance metrics (Confussion Matrix, classification report and log loss)
+                - xgboost for Gradient Boosting models
+                - plotly for visualizations and shap and streamlit-shap for explainability
+                - Streamlit cloud for the web app""")
+        if st.button('NBA Careers webapp', key="ews_webapp"):
             st.write('Github opens in new browser tab')
-            js = "window.open('https://github.com/mariomunooz/MACHINE_LEARNING/blob/main/Application_of_classification_in_Marketing_and_Sales_.ipynb')"  # New tab or window
+            js = "window.open('https://nba-careers.streamlit.app/')"  # New tab or window
             html = '<img src onerror="{}">'.format(js)
             div = Div(text=html)
             st.bokeh_chart(div)
