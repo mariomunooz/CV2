@@ -125,7 +125,7 @@ with st.container():
             """)
         if st.button('Github', key="ec_github"):
             st.write('Github opens in new browser tab')
-            js = "window.open('https://github.com/mariomunooz/Data-Mining/blob/main/Data_Mining_Item_based_recsys.ipynb')"  # New tab or window
+            js = "window.open('https://github.com/mariomunooz/Data-Mining/blob/main/Data_mining_outlier_analysis.ipynb')"  # New tab or window
             html = '<img src onerror="{}">'.format(js)
             div = Div(text=html)
             st.bokeh_chart(div)
