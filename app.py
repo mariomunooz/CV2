@@ -202,7 +202,7 @@ with st.container():
             \n- numpy
             \n- shap""")
         if st.button('Car price prediction web app', key="ccw_github"):
-            st.write('Github opens in new browser tab')
+            st.write('Web app opens in new browser tab')
             js = "window.open('https://car-price-prediction-webapp-expai.streamlit.app/')"  # New tab or window
             html = '<img src onerror="{}">'.format(js)
             div = Div(text=html)
