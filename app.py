@@ -191,16 +191,19 @@ with st.container():
             st.bokeh_chart(div)
 
     with col6:
-        st.subheader("Data Preparation")
+        st.subheader("Car price prediction web app")
         st.write(
-            "In this project, we will focus on data preparation, a crucial step in any data mining project. We will cover initial steps of understanding and preparing a new dataset, including Exploratory Data Analysis, Feature engineering, dealing with missing values, standardizing numerical columns, converting categorical columns to binary variables, managing dates and periods, and generating new features")
-        with st.expander('Takeaways'):
+            "Experience accurate car price predictions using LightGBM on our streamlined web application built with Streamlit. Input car details, get instant results. Simple, efficient, and user-friendly.")
+        with st.expander('Tools'):
             st.write("""
-            \n- The consumers of iPhone usually have more data traffic than the consumers of samsung
-            \n- The customers with higher usage of data traffic also have higher billing amounts""")
-        if st.button('Github', key="ccw_github"):
+            \n- Streamlit
+            \n- Lightgbm
+            \n- pickle
+            \n- numpy
+            \n- shap""")
+        if st.button('Car price prediction web app', key="ccw_github"):
             st.write('Github opens in new browser tab')
-            js = "window.open('https://github.com/mariomunooz/Data-Mining/blob/main/Data_Mining_data_preparation.ipynb')"  # New tab or window
+            js = "window.open('https://car-price-prediction-webapp-expai.streamlit.app/')"  # New tab or window
             html = '<img src onerror="{}">'.format(js)
             div = Div(text=html)
             st.bokeh_chart(div)
