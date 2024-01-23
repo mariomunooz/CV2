@@ -105,7 +105,7 @@ with st.container():
                 - plotly for visualizations and shap and streamlit-shap for explainability
                 - Streamlit cloud for the web app""")
         if st.button('NBA Careers webapp', key="ews_webapp"):
-            st.write('Github opens in new browser tab')
+            st.write('Web app opens in new browser tab')
             js = "window.open('https://nba-careers.streamlit.app/')"  # New tab or window
             html = '<img src onerror="{}">'.format(js)
             div = Div(text=html)
