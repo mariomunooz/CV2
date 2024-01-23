@@ -95,7 +95,7 @@ with st.container():
         st.subheader("NBA talent detection webapp")
         st.write("""This project uses supervised multi-classification algorithms like Random Forests and Gradient Boosting methods to 
                 detect talent at early stages on the NBA, also we use [shap visualizations](https://towardsdatascience.com/using-shap-values-to-explain-how-your-machine-learning-model-works-732b3f40e137) to ensure explainability.
-        \n\n""")
+        """)
         with st.expander('Tools Used'):
             st.write("""
                 - [nba-api](https://github.com/swar/nba_api), requests, Beautiful Soup and SPARQL for data gathering. [More details](https://medium.com/@mariomunozserrano/forecasting-nba-careers-how-to-get-nba-data-3adedaa8984e) 
@@ -194,7 +194,7 @@ with st.container():
         st.subheader("Car price prediction web app")
         st.write(
             "Experience accurate car price predictions using LightGBM on our streamlined web application built with Streamlit. Input car details, get instant results. Simple, efficient, and user-friendly.")
-        with st.expander('Tools'):
+        with st.expander('Tools Used'):
             st.write("""
             \n- Streamlit
             \n- Lightgbm
