@@ -51,7 +51,7 @@ with st.container():
         st.write("""""")
         st.write(
             """
-            I Joined [Holistic Data Solutions](https://holisticds.com/en/) as Business Intelligence consultant in August 2023. There I am working on economic planification platforms for different clients. 
+            I Joined [Holistic Data Solutions](https://holisticds.com/en/) as Business Intelligence consultant in June 2023. There I am working on economic planification platforms for different clients. 
             
             Previous to Holistic, I’ve been working at [Caixabank](https://www.caixabank.com/home_en.html) as Data Scientist as part of the Fraud and Operations Compliance Team. Helping them to create machine learning models to prevent fraud, for over 2 years. At same time during 3 months, I had the opportunity to help the Keck Laboratory for Network Physiology at [Boston University](https://www.bu.edu/) and learn more about how muscles coordinate during tasks.
 
