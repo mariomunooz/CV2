@@ -1,6 +1,6 @@
-﻿bokeh==2.4.1
-requests==2.27.1
-streamlit==1.6.0
-streamlit-lottie==0.0.3
+﻿bokeh==3.2.1
+requests==2.31.0
+streamlit==1.25.0
+streamlit-lottie==0.0.5
 pathlib==1.0.1
-altair==4.0
+altair==5.1.0
